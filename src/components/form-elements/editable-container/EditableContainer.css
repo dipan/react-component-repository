@@ -1,0 +1,32 @@
+.editable-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.edit-input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.edit-button,
+.tick-button,
+.delete-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover,
+.tick-button:hover,
+.delete-button:hover {
+  background-color: #2980b9;
+}

@@ -1,6 +1,8 @@
-import "./App.css";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import ButtonV1 from "./components/buttons/button-v1/ButtonV1";
+import "./App.css";
+import CRUDButton from "./components/buttons/crud-button/CRUDButton";
+import LoaderV1 from "./components/loaders/loader-v1/LoaderV1";
+import LoaderV2 from "./components/loaders/loader-v2/LoaderV2";
 import ToogleButtonV1 from "./components/toogle-buttons/toogle-button-v1/ToogleButtonV1";
 import ToogleButtonV2 from "./components/toogle-buttons/toogle-button-v2/ToogleButtonV2";
 import ToogleButtonV3 from "./components/toogle-buttons/toogle-button-v3/ToogleButtonV3";
@@ -8,6 +10,9 @@ import ToogleButtonV4 from "./components/toogle-buttons/toogle-button-v4/ToogleB
 import ToogleButtonV5 from "./components/toogle-buttons/toogle-button-v5/ToogleButtonV5";
 import ToogleButtonV6 from "./components/toogle-buttons/toogle-button-v6/ToogleButtonV6";
 import ToogleButtonV7 from "./components/toogle-buttons/toogle-button-v7/ToogleButtonV7";
+import ButtonV1 from "./components/buttons/button-v1/ButtonV1";
+import EditableContainer from "./components/form-elements/editable-container/EditableContainer";
+import PasswordInput from "./components/form-elements/password-input/PasswordInput";
 
 function App() {
   return (
@@ -19,11 +24,47 @@ function App() {
             <div className="App">
               <Link to={"/buttons"}>Buttons</Link>
               <br />
+              <Link to={"/form-elements"}>From Elements</Link>
+              <br />
+              <Link to={"/loaders"}>Loaders</Link>
+              <br />
               <Link to={"/toogle-buttons"}>Toogle Buttons</Link>
             </div>
           }
         />
-        <Route path="/buttons" element={<ButtonV1 />} />
+        <Route
+          path="/buttons"
+          element={
+            <>
+              <CRUDButton option="create" />
+              <CRUDButton option="read" />
+              <CRUDButton option="update" />
+              <CRUDButton option="delete" />
+              <br />
+              <ButtonV1 />
+            </>
+          }
+        />
+        <Route
+          path="/form-elements"
+          element={
+            <>
+              <EditableContainer />
+              <br />
+              <PasswordInput />
+            </>
+          }
+        />
+        <Route
+          path="/loaders"
+          element={
+            <div className="row ">
+              <LoaderV1 />
+              <LoaderV2 />
+              <a href="https://cssloaders.github.io/">More Loader</a>
+            </div>
+          }
+        />
         <Route
           path="/toogle-buttons"
           element={
