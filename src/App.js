@@ -13,6 +13,8 @@ import ToogleButtonV7 from "./components/toogle-buttons/toogle-button-v7/ToogleB
 import ButtonV1 from "./components/buttons/button-v1/ButtonV1";
 import EditableContainer from "./components/form-elements/editable-container/EditableContainer";
 import PasswordInput from "./components/form-elements/password-input/PasswordInput";
+import NavbarV1 from "./components/nav-bars/navbar-v1/NavbarV1";
+import LeftSideNavbarV1 from "./components/nav-bars/left-side-navbar-v1/LeftSideNavbarV1";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
               <Link to={"/form-elements"}>From Elements</Link>
               <br />
               <Link to={"/loaders"}>Loaders</Link>
+              <br />
+              <Link to={"/navbars"}>Navars</Link>
               <br />
               <Link to={"/toogle-buttons"}>Toogle Buttons</Link>
             </div>
@@ -61,7 +65,18 @@ function App() {
             <div className="row ">
               <LoaderV1 />
               <LoaderV2 />
-              <a href="https://cssloaders.github.io/">More Loader</a>
+              <a href="https://cssloaders.github.io/" target="_blank">
+                More Loader
+              </a>
+            </div>
+          }
+        />
+        <Route
+          path="/navbars"
+          element={
+            <div className="row ">
+              <NavbarV1 />
+              <LeftSideNavbarV1 />
             </div>
           }
         />
