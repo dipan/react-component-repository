@@ -32,7 +32,7 @@ function PasswordInput() {
         className="password-input"
       />
       <div className="eye-icon" onClick={handleEyeClick}>
-        {showPassword ? "👁️‍🗨️" : "👁️"}
+        {showPassword ? "😵" : "😯"}
       </div>
       <div
         className="eye-icon"
